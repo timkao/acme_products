@@ -12,19 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
     <!-- Custom styles for this template -->
     <link href="/stylesheets/style.css" rel="stylesheet">
 
   </head>
 
   <body>
-    <a href='/'>HOME</a>
+    <button id='home' class="btn btn-default"><a href='/'><i class="fa fa-home"></i></a></button>
     <h1 class='well'>{{target.name}}</h1>
+    <div class="firstBoard">
     <p class='lead'>Price: {{target.price}}<br>Rating: {{target.rating}}</p>
 
     <form action="/products/{{target.name}}?_method=DELETE" method="POST">
       <button class='btn btn-danger'>DELETE</button>
     </form>
+    </div>
   </body>
 
 </html>

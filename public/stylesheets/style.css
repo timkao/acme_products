@@ -2,6 +2,39 @@ body {
   margin-top: 2em;
   margin-left: 20em;
   margin-right: 20em;
+  background-image: url('./shopping.jpg');
+  background-size: auto;
 }
 
+.firstBoard {
+  background-color: #ECECDD;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
 
+.well {
+  margin-bottom: 0;
+  margin-top:0;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+#saveButton {
+  margin-bottom: 1em;
+}
+
+#home a:hover {
+  text-decoration: none;
+}
+
+#home {
+  background-color: #FDFAF2;
+}
+
+#home a {
+  color: black;
+  font-size: 1.5em;
+}

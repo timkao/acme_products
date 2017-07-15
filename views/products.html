@@ -12,14 +12,17 @@
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
     <!-- Custom styles for this template -->
     <link href="/stylesheets/style.css" rel="stylesheet">
+
 
   </head>
 
   <body>
-    <a href='/'>HOME</a>
-    <h1 class='well'>Products</h1>
+    <button id='home' class="btn btn-default"><a href='/'><i class="fa fa-home"></i></a></button>
+    <h1 class='well'>Adding Products</h1>
 
     <form method="POST" action="/products">
       <div class="form-group">
@@ -31,20 +34,21 @@
       <div class="form-group">
         <input name="rating" placeholder="rating (number only)" class="form-control">
       </div>
-      <div class="form-group">
+      <div id='saveButton' class="form-group">
         <button class="btn btn-success">Save</button>
       </div>
     </form>
 
 
     <div id='pdList'>
+      <h1 class='well'>Current Products</h1>
       <ul class=list-group>
 
         {% for product in list %}
 
         <li class='list-group-item'>
           <a href='/products/{{product.name}}'>{{product.name}}</a>
-          <span class='badge'>{{product.rating}}</span>
+          <span class='badge'>Score: {{product.rating}}</span>
         </li>
 
         {% endfor %}
