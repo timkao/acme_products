@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Acme Product by Tim Cop.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <a href='/'>HOME</a>
+    <h1 class='well'>Products</h1>
+
+    <form method="POST" action="/products">
+      <div class="form-group">
+        <input name="name" placeholder="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <input name="price" placeholder="price" class="form-control">
+      </div>
+      <div class="form-group">
+        <input name="rating" placeholder="rating" class="form-control">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success">Save</button>
+      </div>
+    </form>
+
+
+    <div id='pdList'>
+      <ul class=list-group>
+
+        {% for product in list %}
+
+        <li class='list-group-item'>
+          <a href='/products/{{product.name}}'>{{product.name}}</a>
+          <span class='badge'>{{product.rating}}</span>
+        </li>
+
+        {% endfor %}
+
+      </ul>
+
+    <div>
+  </body>
+
+</html>
