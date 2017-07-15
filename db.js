@@ -23,7 +23,16 @@ var productList = [
 
 module.exports = {
   addProduct: function(name, price, rating){
-    productList.push({name: name, price: price, rating: rating});
+
+    if (name === '' || price === '' || rating === '') {
+      throw new Error('Please fill in all the Info!');
+    }
+
+    if (isNaN(Number(price)) || isNaN(Number(rating))) {
+      throw new Error('Number only!');
+    }
+
+    productList.push({name: name, price: '$' + price, rating: rating});
   },
   getAllProducts: function() {
     return productList;

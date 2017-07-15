@@ -22,6 +22,9 @@
     <h1 class='well'>{{target.name}}</h1>
     <p class='lead'>Price: {{target.price}}<br>Rating: {{target.rating}}</p>
 
+    <form action="/products/{{target.name}}?_method=DELETE" method="POST">
+      <button class='btn btn-danger'>DELETE</button>
+    </form>
   </body>
 
 </html>
